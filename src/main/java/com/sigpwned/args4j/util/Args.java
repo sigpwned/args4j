@@ -19,13 +19,41 @@
  */
 package com.sigpwned.args4j.util;
 
+import static java.util.Arrays.asList;
 import java.util.List;
 import com.sigpwned.args4j.Dialect;
+import com.sigpwned.args4j.dialect.UnixDialect;
 import com.sigpwned.args4j.impl.DefaultArgsParser;
 import com.sigpwned.args4j.model.Token;
 
 public final class Args {
   private Args() {}
+
+  /**
+   * Parses the given arguments using the default {@link UnixDialect}. This is the simplest method
+   * for parsing program command-line arguments.
+   * 
+   * @param args the arguments to parse, typically from the main function
+   * @return the parsed tokens
+   * 
+   * @see #parse(List)
+   * @see #parse(Dialect, List)
+   */
+  public static List<Token> parse(String[] args) {
+    return parse(asList(args));
+  }
+
+  /**
+   * Parses the given arguments using the default {@link UnixDialect}.
+   * 
+   * @param args the arguments to parse, typically from the main function
+   * @return the parsed tokens
+   * 
+   * @see #parse(Dialect, List)
+   */
+  public static List<Token> parse(List<String> args) {
+    return parse(UnixDialect.INSTANCE, args);
+  }
 
   /**
    * Parses the given arguments using the given dialect. This is the core method for parsing program
