@@ -1,4 +1,5 @@
-# ARGS4J [![tests](https://github.com/sigpwned/args4j/actions/workflows/tests.yml/badge.svg)](https://github.com/sigpwned/args4j/actions/workflows/tests.yml)
+# ARGS4J [![tests](https://github.com/sigpwned/args4j/actions/workflows/tests.yml/badge.svg)](https://github.com/sigpwned/args4j/actions/workflows/tests.yml) [![Maven Central Version](https://img.shields.io/maven-central/v/com.sigpwned/args4j)](https://central.sonatype.com/artifact/com.sigpwned/args4j)  [![javadoc](https://javadoc.io/badge2/com.sigpwned/args4j/javadoc.svg)](https://javadoc.io/doc/com.sigpwned/args4j) 
+
 
 args4j is a simple library for parsing command-line arguments for Java 8+.
 
